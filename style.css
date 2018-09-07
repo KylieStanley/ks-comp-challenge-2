@@ -26,8 +26,9 @@ h1 {
 }
 
 h2 {
+  color: #4d4d4d;
+  font-size: 2.4rem;
   margin: 20px 0 30px;
-  font-size: 2rem;
 }
 
 ul {
@@ -41,6 +42,12 @@ ul {
 i {
   color: #2790c5;
   padding: 0 10px 0 0;
+}
+
+.circle {
+  border: 1px solid #2790c5;
+  border-radius: 50%;
+  padding: 2px;
 }
 
 li {
@@ -69,7 +76,7 @@ li:hover i {
   grid-template-rows: 35% 65%;
   height: 450px;
 }
-
+/*STYLING FOR CARD TOP CARD SECTION WITH IMAGE*/
 .grid-top {
   background-image: url(assets/hike.jpg);
   display: flex;
@@ -82,14 +89,60 @@ img {
 }
 
 p {
-  color: white;
-  font-family: Arial;
+  color: #4d4d4d;
   font-size: .8rem;
-  text-align: center;
   margin: 0;
 }
 
-.view-number {
-  font-size: 2.2rem;
+.date {
+  font-size: 1rem;
 }
 
+.view {
+  color: white;
+  text-align: center;
+}
+
+.number {
+  font-size: 2.2rem;
+}
+/*STYLING FOR TEXT INSIDE CARD*/
+
+.grid-bottom {
+  align-items: flex-start;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+h3, h4 {
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+h4 {
+font-size: .9rem;
+}
+
+.link {
+  align-self: center;
+  background-color: #efefef;
+  font-size: .7rem;
+  padding: 15px;
+}
+
+.attachments {
+  font-size: 2.2rem;
+  color: #27b3fe;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+}
