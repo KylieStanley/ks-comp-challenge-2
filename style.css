@@ -1,3 +1,4 @@
+/*GENERAL*/
 * {
   box-sizing: border-box;
 }
@@ -5,22 +6,14 @@
 body {
   background-color: #efefef;  
   font-family: 'Open Sans', sans-serif;
-}
-
-header {
-  align-items: flex-end;
-  background-color: #2b2b2b;
-  display: flex;
-  height: 170px;
-  justify-content: space-between;
-  padding: 36px 46px;
+  $base-font-size: 1em;
 }
 
 h1 {
   color: white;
   font-family: 'Roboto Slab', serif;
-  font-weight: 700;
   font-size: 2.5rem;
+  font-weight: 700;
   line-height: .8;
   margin: 0;
 }
@@ -31,28 +24,69 @@ h2 {
   margin: 20px 0 30px;
 }
 
+p {
+  color: #4d4d4d;
+  font-size: .8rem;
+  margin: 0;
+  word-break: break-all;
+}
+
+/*HEADER STYLES*/
+header {
+  align-items: flex-end;
+  background-color: #2b2b2b;
+  display: flex;
+  height: 170px;
+  justify-content: space-between;
+  padding: 36px 46px;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.user-login-container {
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.admin-icon {
+  border-radius: 50%;
+  border: 1px solid white;
+  color: white;
+  margin-right: 6px;
+  padding: 2px;
+}
+
+.fa-caret-down {
+  height: 1px;
+  margin-left: 6px;
+  padding: 0;
+}
+
+span {
+  color: #2790c5;
+}
+
 ul {
   display: flex;
   justify-content: space-between;
-  padding: 0;
   margin: 0;
+  padding: 0;
   width: 450px;
-}
-
-i {
-  color: #2790c5;
-  padding: 0 10px 0 0;
-}
-
-.circle {
-  border: 1px solid #2790c5;
-  border-radius: 50%;
-  padding: 2px;
 }
 
 li {
   color: gray;
   list-style-type: none;
+}
+
+i {
+  color: #2790c5;
+  padding: 0 10px 0 0;
 }
 
 li:hover,
@@ -61,9 +95,10 @@ li:hover i {
 }
 
 .container{
-  margin: 46px;
+  margin: 0 46px;
 }
 
+/*MAIN GRID STYLES*/
 .grid-container {
   display: grid;
   grid-gap: 12px;
@@ -76,8 +111,9 @@ li:hover i {
   grid-template-rows: 35% 65%;
   height: 450px;
 }
-/*STYLING FOR CARD TOP CARD SECTION WITH IMAGE*/
-.grid-top {
+
+/*TOP CARD SECTION WITH IMAGE*/
+.card-top {
   background-image: url(assets/hike.jpg);
   display: flex;
   justify-content: space-between;
@@ -86,12 +122,6 @@ li:hover i {
 
 img {
   height: 50px;
-}
-
-p {
-  color: #4d4d4d;
-  font-size: .8rem;
-  margin: 0;
 }
 
 .date {
@@ -103,12 +133,12 @@ p {
   text-align: center;
 }
 
-.number {
+.count {
   font-size: 2.2rem;
 }
-/*STYLING FOR TEXT INSIDE CARD*/
 
-.grid-bottom {
+/*BOTTOM CARD SECTION WITH TEXT */
+.card-bottom {
   align-items: flex-start;
   background-color: #ffffff;
   display: flex;
@@ -117,20 +147,18 @@ p {
   padding: 15px;
 }
 
-h3, h4 {
-  margin: 0;
-}
-
 h3 {
   font-size: 1.3rem;
   line-height: 1;
+  margin: 0;
 }
 
 h4 {
-font-size: .9rem;
+  font-size: .9rem;
+  margin: 0;
 }
 
-.link {
+.web-link {
   align-self: center;
   background-color: #efefef;
   font-size: .7rem;
@@ -138,11 +166,43 @@ font-size: .9rem;
 }
 
 .attachments {
-  font-size: 2.2rem;
   color: #27b3fe;
+  font-size: 2.2rem;
 }
 
 .card-text {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 760px) {
+  header {
+    padding: 36px 30px;
+  }
+
+  .menu-icon {
+    display: block;
+    padding: 0 5px;
+    font-size: 1.8rem;
+  }
+
+  ul {
+    display: none;
+  } 
+}
+
+@media screen and (max-width: 374px) {
+  .container {
+    margin: 20px;
+  }
+
+  header {
+    height: 170px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    font-size: $base-font-size*1.3;
+  }
 }
