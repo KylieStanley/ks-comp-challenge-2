@@ -75,6 +75,10 @@ span {
   color: #2790c5;
 }
 
+span:hover {
+  color: #ffffff;
+}
+
 ul {
   display: flex;
   justify-content: space-between;
@@ -159,6 +163,10 @@ img {
   height: 50px;
 }
 
+img:hover {
+  height: 55px;
+}
+
 .date {
   font-size: 1rem;
 }
@@ -225,10 +233,6 @@ h4 {
   ul {
     display: none;
   } 
-
-  .menu-icon:hover ul {
-    display: block;
-  }
 }
 
 @media screen and (max-width: 374px) {
@@ -310,7 +314,6 @@ h4 {
     height: 500px;
   }
 }
-
 
 @media screen and (min-width: 1620px) {
   body {
